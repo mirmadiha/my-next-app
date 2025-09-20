@@ -1,3 +1,4 @@
+import Navigation from "./components/navigation"
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
@@ -19,10 +20,14 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body>
+        <header className="bg-slate-900 text-white p-4 text-center">
+          <Navigation/>
+        </header>
         {children}
+        <footer className="bg-slate-900 text-white p-4 text-center">
+          <p>Madiha Aijaz</p>
+        </footer>
       </body>
     </html>
   );
